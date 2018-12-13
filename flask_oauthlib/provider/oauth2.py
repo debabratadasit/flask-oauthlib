@@ -406,7 +406,7 @@ class OAuth2Provider(object):
                 except Exception as e:
                     log.exception(e)
                     return redirect(add_params_to_uri(
-                        self.error_uri, {'error': str(e)}
+                        self.error_uri, {'error': "Some error"}
                     ))
 
             else:
@@ -472,7 +472,7 @@ class OAuth2Provider(object):
         except Exception as e:
             log.exception(e)
             return redirect(add_params_to_uri(
-                self.error_uri, {'error': str(e)}
+                self.error_uri, {'error': "Some error"}
             ))
 
     def verify_request(self, scopes):

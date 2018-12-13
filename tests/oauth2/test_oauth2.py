@@ -226,6 +226,7 @@ class TestRefreshToken(OAuthSuite):
                '&scope=%s&refresh_token=%s'
                '&client_id=%s&client_secret=%s')
         url = url % args
+        print(url)
         rv = self.client.get(url)
         assert b'access_token' in rv.data
 
